@@ -1,13 +1,17 @@
-//Counter Interval function
+//Global Variables
 
-  var counter= 0;
+var players = document.getElementsByClassName("nbaImg");          //convert all images to variable for players
+var score=0;                                                      //initialized score
+
+
+
+//Loop to set count pictures clicked
+
+for (var i = 0; i < players.length; i++) {
+  players[i].addEventListener("click", function() {
+      score = score+1;
+      console.log(score);
  
-  function myImg() {
-  
-    counter=counter+1;
-    console.log(counter); 
-    document.getElementById("help").innerHTML = counter;   
-    
- }
-
-  document.getElementsByClassName("nbaImg")[0].addEventListener("click",myImg());
+});
+}
+ 
