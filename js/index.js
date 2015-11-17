@@ -6,7 +6,7 @@ var resetGame = document.getElementById('restart')
 var clock = 20;
 var timeLeft;
 
-//Loop to set count for pictures clicked and display 
+//Loop to set count for pictures clicked and display them also disables pictures once clicked to prevent double click counts
 
 for (var i = 0; i < players.length; i++) {
   players[i].addEventListener("click", function counter() {
@@ -17,7 +17,7 @@ for (var i = 0; i < players.length; i++) {
   });
 }
 
-//The Timer for the game and display when start button clicked
+//The Timer for the game display, also enables pictures to be clicked when start button clicked
 
 function start() {
   setTimeout(function() {
