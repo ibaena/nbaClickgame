@@ -1,12 +1,39 @@
+body{
+  background-image: url(img/dark_wall.png);
+}
+
 img {
     width: 125px;
     height: 100px;
 }
 
-h1 {
-	text-align: center;
+h3, p {
+	
+  color: white;
 }
 
-button {
-  
+
+header{
+  text-align: center;
+  width: 100%;
+  background-image: url(img/nbalogo.jpg);
+ 
 }
+
+
+.btn-primary {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 40px;
+  width: 125px;
+}
+
+.btn-danger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 40px;
+  width: 125px;
+}
+
