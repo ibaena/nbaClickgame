@@ -1,47 +1,52 @@
 //Global Variables
+var players = document.getElementsByClassName("nbaImg");
+var score = 0;
+var startTime = document.getElementById('start');
+var resetGame = document.getElementById('restart')
+var clock = 20;
+var timeLeft;
 
-var players = document.getElementsByClassName("nbaImg");          //convert all images to variable for players
-var score=0;                                                      //initialized score to track mouse clicks
-var startTime = document.getElementById('start');  
-var resetGame = document.getElementById('restart')         
-
-
-//The Timer to start for the game when button clicked
-
-
-
-function start() {
-    setTimeout(function()
-    { 
-      if (score<10) {
-         alert("You need some practice! You clicked on " +score+" images!" ); 
-      }
-      else if(score>=10 && score<=15){
-          alert("Not bad you clicked on " +score+" images!" ); 
-      }
-      else{
-
-         alert("Awesome job you clicked on " +score+" images!" ); 
-      }; 
-    }, 10000);
-}
-startTime.addEventListener("click",start);
-
-//Loop to set count for pictures clicked
+//Loop to set count for pictures clicked and display 
 
 for (var i = 0; i < players.length; i++) {
-  players[i].addEventListener("click", function counter() 
-  {
-      score = score+1;
-      //alert(score);
-      this.disabled=true;
+  players[i].addEventListener("click", function counter() {
+    score = score + 1;
+    //alert(score);
+    this.disabled = true;
+    document.getElementById("runningCount").innerHTML = score;
   });
 }
 
-//Load and reload page
+//The Timer for the game and display when start button clicked
 
-  function restartGame(){
-      window.location.reload();
-  };
-resetGame.addEventListener("click",restartGame);
+function start() {
+  setTimeout(function() {
+    if (score < 10) {
+      alert("You need some practice! You clicked on " + score + " images!");
+    } else if (score >= 10 && score <= 15) {
+      alert("Not bad you clicked on " + score + " images!");
+    } else {
+      alert("Awesome job you clicked on " + score + " images!");
+    };
+  }, 20000)
+  this.disabled=true;
+  timeLeft = setInterval(function() {
+    document.getElementById('runningTime').innerHTML = --clock;
+    if (clock <= 0) {
+      document.getElementById('runningTime').innerHTML = 'Time!';
+      clearInterval(interval);
+    }
+  }, 1000);
+  for (var i = 0; i < players.length; i++) {
+  players[i].removeAttribute("disabled");
+}
 
+}
+startTime.addEventListener("click", start);
+
+//Load and reload page upon restart button click
+
+function restartGame() {
+  window.location.reload();
+};
+resetGame.addEventListener("click", restartGame);
