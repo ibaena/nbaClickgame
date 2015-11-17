@@ -9,7 +9,7 @@ var timeLeft;
 //Loop to set count for pictures clicked and display them also disables pictures once clicked to prevent double click counts
 
 for (var i = 0; i < players.length; i++) {
-  players[i].addEventListener("click", function counter() {
+  players[i].addEventListener("click", function() {
     score = score + 1;
     //alert(score);
     this.disabled = true;
