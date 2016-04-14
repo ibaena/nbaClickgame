@@ -2,8 +2,8 @@
 var players = document.getElementsByClassName("nbaImg");
 var score = 0;
 var startTime = document.getElementById('start');
-var resetGame = document.getElementById('restart')
-var clock = 20;
+var resetGame = document.getElementById('restart');
+var clock = 10;
 var timeLeft;
 
 //Loop to set count for pictures clicked and display them also disables pictures once clicked to prevent double click counts
@@ -27,9 +27,9 @@ function start() {
       alert("Not bad you clicked on " + score + " images!");
     } else {
       alert("Awesome job you clicked on " + score + " images!");
-    };
-  }, 20000)
-  this.disabled=true;
+    }
+  }, 10000);
+  this.disabled = true;
   timeLeft = setInterval(function() {
     document.getElementById('runningTime').innerHTML = --clock;
     if (clock <= 0) {
@@ -38,8 +38,8 @@ function start() {
     }
   }, 1000);
   for (var i = 0; i < players.length; i++) {
-  players[i].removeAttribute("disabled");
-}
+    players[i].removeAttribute("disabled");
+  }
 
 }
 startTime.addEventListener("click", start);

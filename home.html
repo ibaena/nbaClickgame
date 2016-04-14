@@ -1,148 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>NBA Click Game</title>
-  <meta name="description" content="NBA Click Game">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <head>
+    <meta charset="utf-8">
+    <title>NBA Click Game</title>
+    <meta name="description" content="NBA Click Game">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 
-</head>
+  </head>
 
-<body>
-  <header class="container-fluid">
+  <body>
+    <header class="container-fluid">
 
-    <div class="row">
-    <div class="col-xs-12 col-sm-3">
-      <button class="btn btn-primary" id="start">Start</button>
-    </div>
-    <div class="col-xs-12 col-sm-6">
-      <h3>The NBA Click Game</h3>
-      <img src="img/nbalogo.jpg" class="logo">
-      <p>You have 20 seconds to click on as many nba superstars as you can. You cannot click on the same picture twice. Are you up to the challenge?!</p>
-    </div>
-    <div class="col-xs-12 col-sm-3">
-      <button class="btn btn-danger" id="restart">Restart</button>
-    </div>
-
-    </div>
-  </header>
-
-
-  <div class="container-fluid">
-    <div class="row">
-      <aside>
-        <div class="col-xs-12 col-sm-2">
-          <table class="table scorer">
-            <tr>
-              <td>
-                <h4><b>Score</b></h4></td>
-            </tr>
-            <tr>
-              <td>
-                <h2 id="runningCount">0</h2></td>
-            </tr>
-          </table>
-          <table class="table timer">
-            <tr>
-              <td>
-                <h4><b>Time</b></h4></td>
-            </tr>
-            <tr>
-              <td>
-                <h2 id="runningTime">20</h2></td>
-            </tr>
-          </table>
-
-
+      <div class="row">
+        <div class="col-xs-12 col-sm-3">
+          <button class="btn btn-primary" id="start">Start</button>
         </div>
-      </aside>
-      <div class="col-xs-12 col-sm-10">
-        <table class="table-responsive">
-          <tr>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/rose.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/chris.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/curry.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/davis.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/durant.jpg"></button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/dwight.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/harden.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/jordan.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/kobe.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/lebron.jpg"></button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/lillard.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/melo.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/porz.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/paul.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/rodman.jpg"></button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/tmac.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/wade.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/yao.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/allen.jpg"></button>
-            </td>
-            <td>
-              <button class="btn btn-default nbaImg" disabled="true"><img src="img/conley.jpg"></button>
-            </td>
-          </tr>
+        <div class="col-xs-12 col-sm-6">
+          <h3>The NBA Click Game</h3>
+          <img src="img/nbalogo.jpg" class="logo">
+          <p>You have 10 seconds to click on as many nba superstars as you can. You cannot click on the same picture twice. Are you up to the challenge?!</p>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <button class="btn btn-danger" id="restart">Restart</button>
+        </div>
 
-        </table>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <aside>
+          <div class="col-xs-12 col-sm-2">
+            <table class="table scorer">
+              <tr>
+                <td>
+                  <h4>
+                    <b>Score</b>
+                  </h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h2 id="runningCount">0</h2>
+                </td>
+              </tr>
+            </table>
+            <table class="table timer">
+              <tr>
+                <td>
+                  <h4>
+                    <b>Time</b>
+                  </h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h2 id="runningTime">10</h2>
+                </td>
+              </tr>
+            </table>
+
+          </div>
+        </aside>
+        <div class="col-xs-12 col-sm-10">
+          <table class="table-responsive">
+            <tr>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/rose.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/chris.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/curry.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/davis.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/durant.jpg"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/dwight.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/harden.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/jordan.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/kobe.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/lebron.jpg"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/lillard.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/melo.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/porz.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/paul.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/rodman.jpg"></button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/tmac.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/wade.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/yao.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/allen.jpg"></button>
+              </td>
+              <td>
+                <button class="btn btn-default nbaImg" disabled="true"><img src="img/conley.jpg"></button>
+              </td>
+            </tr>
+
+          </table>
+        </div>
       </div>
     </div>
-  </div>
-   
 
-  <script type="text/javascript" src="js/index.js">
-  </script>
-</body>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
 
 </html>
